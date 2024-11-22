@@ -87,7 +87,7 @@ export default function ProjectsSection() {
     } finally {
       setTimeout(() => {
         setStatus('idle');
-      }, 1500);
+      }, 1000);
     }
   };
 
@@ -212,7 +212,7 @@ export default function ProjectsSection() {
                     className="rounded-lg object-cover w-full h-[300px]"
                   />
                   <Button
-                  type="reset"
+                    type="reset"
                     variant="destructive"
                     onClick={() => deleteUpload(newProject.file_id || "")}
                     className="w-full"

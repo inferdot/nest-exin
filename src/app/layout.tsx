@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Syne } from "next/font/google";
 import BackgroundSection from "@/components/Background";
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from "@vercel/analytics/react"
 
 const syne = Syne({
   variable: "--font-syne-sans",
@@ -24,6 +26,8 @@ export default function RootLayout({
       <body className={syne.className}>
         <BackgroundSection />
         {children}
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
