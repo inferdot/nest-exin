@@ -58,8 +58,8 @@ const ProjectCard: FC<IProjects & { onImageClick: () => void }> = ({ project_nam
   return (
     <Card className="w-full h-full flex flex-col border bg-white dark:bg-gray-800 text-black transition-colors duration-300 shadow-lg">
       <CardHeader>
-        <CardTitle className="text-xl">{project_name}</CardTitle>
-        <CardDescription className="text-lg">{description}</CardDescription>
+        <CardTitle className="text-xl max-w-[80%] mx-auto">{project_name}</CardTitle>
+        <CardDescription className="text-lg max-w-[80%] mx-auto">{description}</CardDescription>
       </CardHeader>
       <CardContent className="relative flex-grow">
         {imgLoading ? (
