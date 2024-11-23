@@ -57,9 +57,17 @@ const ProjectCard: FC<IProjects & { onImageClick: () => void }> = ({ project_nam
 
   return (
     <Card className="w-full h-full flex flex-col border bg-white dark:bg-gray-800 text-black transition-colors duration-300 shadow-lg">
-      <CardHeader>
-        <CardTitle className="text-xl max-w-[80%] mx-auto">{project_name}</CardTitle>
-        <CardDescription className="text-lg max-w-[80%] mx-auto">{description}</CardDescription>
+      <CardHeader className="pb-2">
+        <CardTitle>
+          <h3 className="text-lg font-semibold leading-tight whitespace-pre-wrap break-words max-h-24 overflow-y-auto">
+            {project_name}
+          </h3>
+        </CardTitle>
+        <CardDescription>
+          <p className="text-md text-gray-600 whitespace-pre-wrap break-words max-h-32 overflow-y-auto">
+            {description}
+          </p>
+        </CardDescription>
       </CardHeader>
       <CardContent className="relative flex-grow">
         {imgLoading ? (
