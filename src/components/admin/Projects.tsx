@@ -256,8 +256,12 @@ export default function ProjectsSection() {
               </div>
             ) : (
               <>
-                <h2 className="text-3xl font-bold">{selectedProject.project_name}</h2>
-                <p className="text-lg">{selectedProject.description}</p>
+                <h3 className="text-lg font-semibold leading-tight whitespace-pre-wrap break-words max-h-24 overflow-y-auto">
+                  {selectedProject.project_name}
+                </h3>
+                <p className="text-lg text-gray-600 whitespace-pre-wrap break-words max-h-32 overflow-y-auto">
+                  {selectedProject.description}
+                </p>
                 {selectedProject.image_url && (
                   <div className="relative">
                     {status === 'imgloadin' ? (
