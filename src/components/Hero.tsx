@@ -13,24 +13,24 @@ import Image from "next/image";
 const heroContent = [
   {
     title: "Welcome to Our Platform",
-    description: "Revolutionizing the way you work and create",
+    description: "Committed to Excellence, Inspired by You.",
     cta: "Speak to our Expert",
     image: "/landpage.jpg?height=1080&width=1920",
-    href:"tel:+918910809232"
+    href: "tel:+918910809232"
   },
   {
     title: "Transforming Spaces",
     description: "Your vision, our expertise",
     cta: "Our Works",
     image: "/landpage2.jpg?height=1080&width=1920",
-    href:"#portfolio"
+    href: "#portfolio"
   },
   {
     title: "Our Range of Services",
     description: "High quality Interior and Exterior solutions for every project",
     cta: "Provided Services",
     image: "/landpage3.jpg?height=1080&width=1920",
-    href:"#services"
+    href: "#services"
   },
 ];
 
