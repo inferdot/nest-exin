@@ -75,15 +75,17 @@ const ProjectCard: FC<IProjects & { onImageClick: () => void }> = ({ project_nam
             <Loader2 className="h-18 w-18 animate-spin" />
           </div>
         ) : (
-          <Image
-            src={image_url}
-            width={350}
-            height={450}
-            alt={project_name}
-            objectFit="cover"
-            className="rounded-md cursor-pointer"
-            onClick={onImageClick}
-          />
+            <div className="mx-auto flex justify-center items-center ">
+            <Image
+              src={image_url}
+              width={350}
+              height={450}
+              alt={project_name}
+              objectFit="cover"
+              className="rounded-md cursor-pointer"
+              onClick={onImageClick}
+            />
+          </div>
         )}
       </CardContent>
     </Card>
