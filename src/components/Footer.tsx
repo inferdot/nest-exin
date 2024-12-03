@@ -1,4 +1,4 @@
-import { Heart, Instagram, Mail, MapPin, Phone, Shield, Twitter, Youtube } from "lucide-react";
+import { Heart, Instagram, Mail, MapPin, Phone, Twitter, Youtube } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {
