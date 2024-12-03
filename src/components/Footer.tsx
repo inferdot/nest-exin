@@ -35,15 +35,6 @@ export default function Footer() {
                 <Link href={"https://www.youtube.com/@nestexin"}><Youtube className="w-4 h-4 mr-2" /></Link>
                 <Link href={"https://www.instagram.com/nest_exin"}><Instagram className="w-4 h-4 mr-2" /></Link>
               </li>
-              <li className="hidden md:block text-sm">
-                <Link
-                  className="flex flex-row items-center justify-start"
-                  href="/admin"
-                >
-                  <Shield className="w-4 h-4  mr-2" />
-                  Admin
-                </Link>
-              </li>
             </ul>
           </div>
         </div>
