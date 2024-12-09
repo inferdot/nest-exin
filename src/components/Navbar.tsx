@@ -2,11 +2,12 @@
 
 import { FC, RefObject, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetFooter, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { Phone, Mail } from "lucide-react";
 
 interface NavbarProps {
   scrollToSection: (id: string) => void;
@@ -15,6 +16,8 @@ interface NavbarProps {
 
 const Navbar: FC<NavbarProps> = ({ scrollToSection, navRef }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const phoneNumber = "+918910809232";
 
   const navItems = ["portfolio", "services", "about"];
 
@@ -29,9 +32,8 @@ const Navbar: FC<NavbarProps> = ({ scrollToSection, navRef }) => {
         >
           <Button
             variant="ghost"
-            className={`font-thin text-xl hover:bg-white hover:text-black ${
-              mobile ? "w-1/2 justify-start bg-white text-black mt-5" : ""
-            }`}
+            className={`font-thin text-xl hover:bg-white hover:text-black ${mobile ? "w-1/2 justify-start bg-white text-black mt-5" : ""
+              }`}
             onClick={() => {
               scrollToSection(section);
               if (mobile) setIsOpen(false);
@@ -96,6 +98,28 @@ const Navbar: FC<NavbarProps> = ({ scrollToSection, navRef }) => {
                 </div>
               </motion.div>
             )}
+            <SheetFooter className="flex flex-col ">
+              <motion.div
+                initial={{ x: 300 }}
+                animate={{ x: 0 }}
+                exit={{ x: 300 }}
+                transition={{ type: "spring", stiffness: 100, damping: 20 }}
+              >
+                <a
+                  href={`tel:${phoneNumber}`}
+                  className=" flex flex-row my-2 gap-x-2 font-semibold text-md"
+                >
+                  <Phone className="h-6 w-6 text-white" />
+                  : 8910809232
+                </a>
+
+                <p className=" flex flex-row my-2 gap-x-2 font-semibold text-md">
+                  <Mail className="h-6 w-6 text-white" />
+                  : nest.exin@gmail.com
+                </p>
+              </motion.div>
+
+            </SheetFooter>
           </AnimatePresence>
         </SheetContent>
       </Sheet>

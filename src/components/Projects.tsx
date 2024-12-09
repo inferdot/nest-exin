@@ -51,31 +51,19 @@ const ProjectCard: FC<IProjects & { onImageClick: () => void }> = ({ project_nam
   useEffect(() => {
     const timer = setTimeout(() => {
       setImgLoading(false)
-    }, 1500)
+    }, 2000)
     return () => clearTimeout(timer)
   }, [])
 
   return (
     <Card className="w-full h-full flex flex-col border bg-white dark:bg-gray-800 text-black transition-colors duration-300 shadow-lg">
-      <CardHeader className="pb-2">
-        <CardTitle>
-          <h3 className="text-lg font-semibold leading-tight whitespace-pre-wrap break-words max-h-24 overflow-y-auto">
-            {project_name}
-          </h3>
-        </CardTitle>
-        <CardDescription>
-          <p className="text-md text-gray-600 whitespace-pre-wrap break-words max-h-32 overflow-y-auto">
-            {description}
-          </p>
-        </CardDescription>
-      </CardHeader>
-      <CardContent className="relative flex-grow">
+      <CardContent className="relative pt-3 flex-grow">
         {imgLoading ? (
           <div className="flex justify-center items-center h-full">
             <Loader2 className="h-18 w-18 animate-spin" />
           </div>
         ) : (
-            <div className="mx-auto flex justify-center items-center ">
+          <div className="mx-auto flex justify-center items-center ">
             <Image
               src={image_url}
               width={350}
@@ -88,6 +76,19 @@ const ProjectCard: FC<IProjects & { onImageClick: () => void }> = ({ project_nam
           </div>
         )}
       </CardContent>
+
+      <CardHeader className="pb-2 flex items-end">
+        <CardTitle>
+          <h3 className="text-lg font-semibold leading-tight whitespace-pre-wrap break-words max-h-24 overflow-y-auto">
+            {project_name}
+          </h3>
+        </CardTitle>
+        <CardDescription >
+          <p className="text-md text-gray-600 whitespace-pre-wrap break-words max-h-32 overflow-y-auto">
+            {description}
+          </p>
+        </CardDescription>
+      </CardHeader>
     </Card>
   )
 }
