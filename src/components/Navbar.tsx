@@ -82,7 +82,7 @@ const Navbar: FC<NavbarProps> = ({ scrollToSection, navRef }) => {
         </SheetTrigger>
         <SheetContent
           side="right"
-          className="w-[300px] sm:w-[400px] bg-black/30 backdrop-blur-sm text-white"
+          className="w-[300px] sm:w-[400px] bg-black/30 backdrop-blur-sm text-white "
         >
           <AnimatePresence>
             {isOpen && (
@@ -98,25 +98,27 @@ const Navbar: FC<NavbarProps> = ({ scrollToSection, navRef }) => {
                 </div>
               </motion.div>
             )}
-            <SheetFooter className="flex flex-col ">
+            <SheetFooter className="flex flex-col mt-52 ">
               <motion.div
                 initial={{ x: 300 }}
                 animate={{ x: 0 }}
                 exit={{ x: 300 }}
                 transition={{ type: "spring", stiffness: 100, damping: 20 }}
               >
-                <a
-                  href={`tel:${phoneNumber}`}
-                  className=" flex flex-row my-2 gap-x-2 font-semibold text-md"
-                >
-                  <Phone className="h-6 w-6 text-white" />
-                  : 8910809232
-                </a>
+                <div>
+                  <a
+                    href={`tel:${phoneNumber}`}
+                    className=" flex flex-row my-2 gap-x-2 font-semibold text-md"
+                  >
+                    <Phone className="h-6 w-6 text-white" />
+                    : 8910809232
+                  </a>
 
-                <p className=" flex flex-row my-2 gap-x-2 font-semibold text-md">
-                  <Mail className="h-6 w-6 text-white" />
-                  : nest.exin@gmail.com
-                </p>
+                  <p className=" flex flex-row my-2 gap-x-2 font-semibold text-md">
+                    <Mail className="h-6 w-6 text-white" />
+                    : nest.exin@gmail.com
+                  </p>
+                </div>
               </motion.div>
 
             </SheetFooter>
